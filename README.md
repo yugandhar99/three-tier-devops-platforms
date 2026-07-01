@@ -1,4 +1,4 @@
-# Three-Tier DevOps Platform on AWS E KS
+# Three-Tier DevOps Platform on AWS EKS
 
 A production-style DevOps project for deploying a **React frontend**, **Spring Boot backend**, and **MySQL database** using **Docker**, **Helm**, **ArgoCD GitOps**, and **AWS EKS**.
 
