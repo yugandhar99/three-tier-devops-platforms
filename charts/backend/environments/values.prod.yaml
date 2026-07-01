@@ -1,0 +1,15 @@
+image:
+  tag: sha-1c0eb6bdf91c52d35f94d666e0d76b0046f12093
+resources:
+  requests:
+    cpu: 250m
+    memory: 512Mi
+  limits:
+    cpu: 500m
+    memory: 1024Mi
+autoscaling:
+  enabled: true
+mysql:
+  primary:
+    persistence:
+      enabled: true
