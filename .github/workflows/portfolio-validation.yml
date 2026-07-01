@@ -1,0 +1,41 @@
+name: Portfolio Validation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate portfolio structure
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check required files
+        shell: bash
+        run: |
+          test -f README.md || (echo "README.md is missing" && exit 1)
+          test -f .gitignore || (echo ".gitignore is missing" && exit 1)
+          test -f SECURITY.md || (echo "SECURITY.md is missing" && exit 1)
+          test -f GITHUB_UPLOAD_STEPS.md || (echo "GITHUB_UPLOAD_STEPS.md is missing" && exit 1)
+          echo "Required portfolio files are present."
+
+      - name: Check project folders
+        shell: bash
+        run: |
+          echo "Repository root:"
+          ls -la
+          test -d src || (echo "src folder is missing" && exit 1)
+          echo "Project structure check completed."
+
+      - name: Advisory README check
+        shell: bash
+        run: |
+          grep -q "Connect With Me" README.md && echo "Contact footer found." || echo "Contact footer not found; advisory only."
+          echo "Portfolio validation completed successfully."
