@@ -1,5 +1,5 @@
 variable "aws_region" {
-  description = "AWS region for the EKS platform."
+  description = "AWS re gion for the EKS platform."
   type        = string
   default     = "us-east-1"
 }
