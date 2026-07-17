@@ -1,6 +1,6 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
-metadata:
+metadata: 
   name: three-tier-app
   namespace: argocd
 spec:
