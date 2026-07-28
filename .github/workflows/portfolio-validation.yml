@@ -1,4 +1,4 @@
-name: Portfolio Validati on
+name: Portfolio Validation
 on:
   push:
     branches: [main]
