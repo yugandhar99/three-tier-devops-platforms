@@ -5,7 +5,7 @@ locals {
     ManagedBy   = "Terraform"
   }
 }
-
+ 
 # Portfolio-safe Terraform skeleton.
 # Expand this file with VPC, EKS, ECR, IAM, and observability resources when you are ready to deploy.
 
