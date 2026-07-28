@@ -1,6 +1,6 @@
 # Disabled by default for portfolio stability.
 # Rename this file to dependabot.yml only when you are ready to manage automated dependency PRs.
-version: 2
+version: 1
 updates:
   - package-ecosystem: "github-actions"
     directory: "/"
