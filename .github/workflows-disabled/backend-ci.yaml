@@ -1,5 +1,5 @@
 name: Backend CI pipeline
-on:
+on: 
   push:
     branches:
       - main
