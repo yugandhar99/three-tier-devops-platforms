@@ -1,4 +1,4 @@
-terraform {
+terraform { 
   backend "s3" {
     bucket         = "replace-with-your-terraform-state-bucket"
     key            = "three-tier-devops-eks/terraform.tfstate"
